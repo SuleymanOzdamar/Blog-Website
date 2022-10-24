@@ -1,9 +1,9 @@
 import React from 'react'
 
 const About = (props) => {
-  setTimeout(()=>{
-    props.history.push('/abuot')
-  },3000)
+  // setTimeout(()=>{
+  //   props.history.push('/abuot')
+  // },3000)
   return (
     <div>
       <div className='container'>

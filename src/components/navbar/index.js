@@ -2,9 +2,9 @@ import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 
 const Navbar = (props) => {
-  setTimeout(()=>{
-    props.history.push('/abuot')
-  },3000)
+  // setTimeout(()=>{
+  //   props.history.push('/abuot')
+  // },3000)
   return (
     <nav>
       <div class="nav-wrapper">
