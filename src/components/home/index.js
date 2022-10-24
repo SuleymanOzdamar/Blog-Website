@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import './style.css';
 
 class Home extends Component {
   state = {
@@ -23,10 +24,11 @@ class Home extends Component {
     const postList = posts.length ? (
       posts.map(post => {
         return (
-          <div className='card' key={post.id}>
+          <div className='post card' key={post.id}>
+            <img src='https://images.unsplash.com/photo-1542779283-429940ce8336?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=170&q=80' />
             <div className='card-content'>
-              <Link to={'/' + post.id}/>
-              <span className='card-title'>{post.title}</span>
+              <Link to={'//' + post.id}/>
+              <span className='card-title red-text'>{post.title}</span>
               <p>{post.body}</p>
             </div>
           </div>
@@ -37,7 +39,7 @@ class Home extends Component {
     )
     return (
       <div>
-        <div className='container'>
+        <div className='home container'>
           <h4 className='center'>Home</h4>
           <p>{postList}</p>
         </div>

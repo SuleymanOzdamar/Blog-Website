@@ -7,14 +7,12 @@ class Post extends Component {
         post:null
     }
     componentDidMount(){
-        // console.log(this.props);
         let id = this.props.match.params.post_id;
-        axios.get('https://jsonplaceholder.typicode.com/posts' + id)
+        axios.get('https://jsonplaceholder.typicode.com/posts/' + id)
         .then(
             res => {
-                console.log(res);
                 this.setState({
-                posts:res.data
+                post:res.data
                 });
             }
     )
