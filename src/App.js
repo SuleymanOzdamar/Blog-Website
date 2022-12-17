@@ -5,12 +5,14 @@ import Home from './components/home';
 import About from './components/about';
 import Contact from './components//contact';
 import Post from './components/Post';
+import Back from './components/Back';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar />
+        <Back className="back"/>
         <Routes>
           <Route exact path='/' element={ <Home /> } />
           <Route path='/about' element={ <About /> } />
